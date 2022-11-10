@@ -20,17 +20,17 @@ samples, guidance on mobile development, and a full API reference.
  ### 2.Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
  - text : menampilkan text
  - Position:widget yang posisi childnya dapat diatur sesuai keinginan user
- - scaffold
+ 
  - icon: menampilkan icon
  - padding : Widget yang menyisipkan child sesuian dengan padding yang diberikan.
  - row: widget yang menenmpatkan childnya secara horizontal
  - column: layout widget yang menempatkan child dalam bentuk list secara vertikan
  - center: layout widget yang menempatkan child di tengah
- - appbar
+ 
  
  ### 3.Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
- setState is the Flutter way to issue a rebuild of the current widget and its descendants. During a rebuild, the most recent variable values will be used to create the user interface. Let’s say, a user toggles a switch from on to off.
- setState berfungsi untuk memberi tahu flutter bahwa terjadi perubahan state dari suatu objek yang berpengaruh ke user interface. Kemudian, flutter akan me-rebuild view sesuai dengan perubahan yang terjadi. 
+ 
+ setState berfungsi untuk memberi tahu flutter bahwa terjadi perubahan state dari suatu objek yang berpengaruh ke user interface. Kemudian, flutter akan me-rebuild view sesuai dengan perubahan yang terjadi. Dalam counter_7, seState digunakan di fungsi inceremenCounter, decrementCounter,dan setText karena fungsi tersebut mengubah nilai dari variable yang akan ditampilkan di widget.
  ### 4.Jelaskan perbedaan antara const dengan final.
  value pada const harus telah diinisialisasi saat compile time, sedangkan final tidak harus memiliki value saat kompilasi
  ### 5.Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
