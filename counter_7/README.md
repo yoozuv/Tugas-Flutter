@@ -40,3 +40,34 @@ samples, guidance on mobile development, and a full API reference.
  - tambahkan floatingActionButton untuk melakukann increment dan decrement counter, dan atur posisi button tersebut dengan padding
  - atur warna text kategori menggunakan TextStyle
  - 
+
+## Tugas 8
+ ### 1.Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+ pushReplacement akan menggantikan page sebelumnya sehingga page sebelumnya dihapus, sedangkan push hanya menambah page di atas page sebelumnya, dan page sebelumnya masih ada
+ 
+ ### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+ - text : menampilkan text
+ - Position:widget yang posisi childnya dapat diatur sesuai keinginan user
+ - Scaffold : widget utama untuk membuat sebuah halaman pada flutter
+ - icon: menampilkan icon
+ - padding : Widget yang menyisipkan child sesuian dengan padding yang diberikan.
+ - row: widget yang menenmpatkan childnya secara horizontal
+ - column: layout widget yang menempatkan child dalam bentuk list secara vertikan
+ - center: layout widget yang menempatkan child di tengah
+ - Navigator: Widget yang mengelola sekumpulan child widget dalam bentuk stack
+ 
+### 3. Sebutkan jenis-jenis event yang ada pada Flutter
+- onPressed : 
+- onTap
+- onSaved
+- onChanged
+
+### 4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+navigator mengelola child widget dalam bentuk stack yang dapat di-push dan pop. Ketika di-push, maka page yang di-push tersebut akan menghimpit page sebelumnya sehingga page tersebut berada di top of stack dan ditampilkan, sedangkan ketika di-pop, page sebelumnya akan ditampilkan dan page saat ini akan hilang
+
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- membuat dua file baru, yaitu form.dart untuk tambha budget dan DataBudget.dart untuk menampilkan data yang ditambahkan.
+- tambhakan drawer di file main.dart, form.dart, dan DataBudget.dart. Di darawer tersebut, beri Listile yang mengarahkan ke halaman main, form, dan DataBudget menggunakan navigator.pushReplacement.
+- Pada form.dart, tambhakan widget Padding yang memiliki child textFpormField, kemudian,tambahkan dropdown jenis. Pada widget tersebut, beri event sesuai dengan soal
+- Pada DataBudget.dart, tambhakan widget untuk menampilkan data yang di-passing melalui argumen constructer MyDataBudget.
+-
