@@ -3,6 +3,7 @@ import 'package:counter_7/model/my_watchlist_model.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/utils/drawer.dart';
 import 'package:counter_7/utils/FetchMyWatchList.dart';
+import 'package:counter_7/page/form.dart';
 
 class MyWatchListDetail extends StatelessWidget {
   const MyWatchListDetail({super.key, required this.myWatchList});

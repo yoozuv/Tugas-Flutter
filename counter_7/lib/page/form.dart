@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/page/DataBudget.dart';
 import 'package:counter_7/utils/drawer.dart';
+import 'package:counter_7/page/my_watchlist_page.dart';
+import 'package:counter_7/page/my_watchlist_detail.dart';
 
 
 class MyFormPage extends StatefulWidget {
@@ -31,8 +33,8 @@ class _MyFormPageState extends State<MyFormPage> {
             appBar: AppBar(
                 title: const Text('Tambah Budget'),
             ),
-          drawer: const MainDrawer(),
-            /*drawer: Drawer(
+          //drawer: const MainDrawer(),
+            drawer: Drawer(
     child: Column(
      children: [
       // Menambahkan clickable menu
@@ -65,10 +67,19 @@ class _MyFormPageState extends State<MyFormPage> {
          MaterialPageRoute(builder: (context) => MyDataBudgetPage(data: data)),
         );
        },
-      ), 
+      ),
+      ListTile(
+          title: const Text('My Watch List'),
+          onTap: (){
+    Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => const MyWatchList()),
+    );
+    },
+    ), 
      ],
     ),
-   ), */
+   ), 
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-/*import 'package:counter_7/form.dart';
-import 'package:counter_7/DataBudget.dart';
-import 'package:counter_7/my_watchlist_page.dart'; */
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/DataBudget.dart';
+import 'package:counter_7/page/my_watchlist_page.dart'; 
 import 'package:counter_7/utils/drawer.dart';
 void main() {
   runApp(const MyApp());
@@ -101,8 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      drawer: const MainDrawer(),
-      /*drawer: Drawer(
+      //drawer: const MainDrawer(),
+      drawer: Drawer(
         child: Column(
             children: [
         // Menambahkan clickable menu
@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       ListTile(
-          tittle: const Text('My Watch List').
+          title: const Text('My Watch List'),
           onTap: (){
     Navigator.pushReplacement(
     context,
@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     ],
     ),
-    ), */
+    ), 
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
