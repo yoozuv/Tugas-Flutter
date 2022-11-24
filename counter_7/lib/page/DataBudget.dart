@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/form.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/utils/drawer.dart';
 
 class MyDataBudgetPage extends StatefulWidget {
   const MyDataBudgetPage({super.key, this.data});
@@ -30,7 +31,8 @@ class _MyDataBudgetPageState extends State<MyDataBudgetPage> {
       appBar: AppBar(
         title: Text('Data Budget'),
       ),
-      drawer: Drawer(
+      drawer: const MainDrawer(),
+      /*drawer: Drawer(
         child: Column(
           children: [
             // Menambahkan clickable menu
@@ -66,7 +68,7 @@ class _MyDataBudgetPageState extends State<MyDataBudgetPage> {
             ),
           ],
         ),
-      ),
+      ), */
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
