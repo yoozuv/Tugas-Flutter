@@ -70,4 +70,34 @@ navigator mengelola child widget dalam bentuk stack yang dapat di-push dan pop. 
 - tambhakan drawer di file main.dart, form.dart, dan DataBudget.dart. Di darawer tersebut, beri Listile yang mengarahkan ke halaman main, form, dan DataBudget menggunakan navigator.pushReplacement.
 - Pada form.dart, tambhakan widget Padding yang memiliki child textFpormField, kemudian,tambahkan dropdown jenis. Pada widget tersebut, beri event sesuai dengan soal
 - Pada DataBudget.dart, tambhakan widget untuk menampilkan data yang di-passing melalui argumen constructer MyDataBudget.
--
+
+# Tugas 9
+### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa, tapi  data yang didapatkan berupa data mentah dari HTTP response sehingga  lebih sulit untuk diproses. Oleh karena itu,  lebih baik membuat models sebelum mengambil data JSON. 
+
+### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- text : menampilkan text
+ - Position:widget yang posisi childnya dapat diatur sesuai keinginan user
+ - Scaffold : widget utama untuk membuat sebuah halaman pada flutter
+ - icon: menampilkan icon
+ - padding : Widget yang menyisipkan child sesuian dengan padding yang diberikan.
+ - row: widget yang menenmpatkan childnya secara horizontal
+ - column: layout widget yang menempatkan child dalam bentuk list secara vertikan
+ - center: layout widget yang menempatkan child di tengah
+ 
+ -GestureDetector: Widget yang men-detect *gesture*.
+
+### 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Menambahkan dependency http ke project.
+- Membuat model sesuai dengan respons  data yang berasal dari web service tersebut.
+- Membuat http request ke web service menggunakan dependency http.
+- Mengonversi objek yang didapatkan dari web service ke model yang telah kita buat.
+- Menampilkan data yang telah dikonversi ke aplikasi menggunakan FutureBuilder.
+
+### 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Menambahkan dependensi HTTP pada proyek.
+- Membuat model untuk memproses data JSON.
+- Membuat fungsi untuk fetch data dalam folder utils.
+- Menggunakan future builder untuk fetch dan menampilkan data.
+- Membuat page detail yang berisi detail dari objek MyWatchList
+- menambhakna  widget GestureDetector agar judul watchlist dapat di-*press* lalu pindah ke page detail.
