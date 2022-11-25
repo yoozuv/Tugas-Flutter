@@ -78,7 +78,7 @@ class MyWatchListDetail extends StatelessWidget {
                         Text(
                           myWatchList.fields.title,
                           style:
-                          TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -90,45 +90,45 @@ class MyWatchListDetail extends StatelessWidget {
                         children: [
                           Text("Release Date: ",
                               style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold)),
+                                  fontSize: 15, fontWeight: FontWeight.bold)),
                           Text(
                               myWatchList.fields.releaseDate
                                   .toString()
                                   .substring(0, 10),
-                              style: TextStyle(fontSize: 16)),
+                              style: TextStyle(fontSize: 15)),
                         ],
                       ),
                       Row(
                         children: [
                           Text("Rating: ",
                               style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold)),
+                                  fontSize: 15, fontWeight: FontWeight.bold)),
                           Text(myWatchList.fields.rating.toString(),
-                              style: TextStyle(fontSize: 16)),
+                              style: TextStyle(fontSize: 15)),
                         ],
                       ),
                       Row(
                         children: [
                           Text("Status: ",
                               style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold)),
+                                  fontSize: 15, fontWeight: FontWeight.bold)),
                           Text(
-                              myWatchList.fields.watched.toString(),
+                              myWatchList.fields.watched,
 
-                              style: TextStyle(fontSize: 16)),
+                              style: TextStyle(fontSize: 15)),
                         ],
                       ),
                       Row(
                         children: [
                           Text("Review: ",
                               style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold)),
+                                  fontSize: 15, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Row(children: [
                         Flexible(
                           child: Text(myWatchList.fields.review.toString(),
-                              style: TextStyle(fontSize: 16)),
+                              style: TextStyle(fontSize: 15)),
                         )
                       ])
                     ],

@@ -48,7 +48,7 @@ required    this.review,
   String review;
 
   factory Fields.fromJson(Map<String, dynamic> json) => Fields(
-    //watched: watchedValues.map[json["watched"]], lama
+    //watched: watchedValues.map[json["watched"]], //lama
     watched: json["watched"],//baru
 
     title: json["title"],

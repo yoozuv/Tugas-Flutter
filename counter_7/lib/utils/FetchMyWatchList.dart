@@ -10,6 +10,11 @@ Future<List<MyWatchListModel>> fetchMyWatchList() async {
   Uri.parse('http://tugas2-app.herokuapp.com/mywatchlist/json/');
   var response = await http.get(
     url,
+     headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
+
   );
 
   // melakukan decode response menjadi bentuk json

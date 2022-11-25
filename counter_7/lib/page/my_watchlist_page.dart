@@ -13,7 +13,7 @@ class MyWatchList extends StatefulWidget {
 }
 
 class _MyWatchListState extends State<MyWatchList> {
-  bool is_checked = false;
+ // bool is_checked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class _MyWatchListState extends State<MyWatchList> {
               },
             ),
             ListTile(
-              tittle: const Text('My Watch List').
+              title: const Text('My Watch List'),
                 onTap: (){
                 Navigator.pushReplacement(
                 context,
@@ -75,18 +75,20 @@ class _MyWatchListState extends State<MyWatchList> {
         builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.data == null) {
             return const Center(child: CircularProgressIndicator());
-          } else {
+          } 
+          else {
             if (!snapshot.hasData) {
               return Column(
                 children: const [
                   Text(
-                    "Tidak Watch List yang Dibuat :(",
+                    "Tidak Watch List !:(",
                     style: TextStyle(color: Color(0xff59A5D8), fontSize: 20),
                   ),
                   SizedBox(height: 8),
                 ],
               );
-            } else {
+            } 
+            else {
               return ListView.builder(
                   itemCount: snapshot.data!.length,
                   itemBuilder: (_, i) => Container(
@@ -106,7 +108,7 @@ class _MyWatchListState extends State<MyWatchList> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => MyWatchListDetail(
-                                  myWatchList: listMyWatchListTotal[i])),
+                                  myWatchList: snapshot.data[i])),
                         );
                       },
                       child: Column(
